@@ -10,9 +10,10 @@ $(() => {
                 const priority = result[i].priority;
                 const price = result[i].price;
                 const done = result[i].done;
-                var text = "Date: " +date +" | Title: " +title +" | Task: " +task +" | Priority: "
-                    +priority +" | Price: " +price +" | Done: " +done
-                var element = $("<div></div></br>").text(text);
+                var text = "<b>Date:</b> " +date +" | <b>Title:</b> " +title +" | <b>Task:</b> " +task +" | <b>Priority:</b> "
+                    +priority +" | <b>Price:</b> " +price +" | <b>Done:</b> " +done
+                if(done==false) text += " <button onclick=\"complete(this)\" value=\""+title +"\">Complete</button>"
+                var element = $("<div></div></br>").html(text);
                 $(".list").append(element);  
             }
         },
@@ -21,3 +22,19 @@ $(() => {
         }
     })
 })
+
+function complete(title){
+    $.ajax({
+        url: "http://localhost:3000/note/done?title=" +title.value,
+        type: "patch",
+        //dataType: "json",
+        //contentType: "application/json",
+        success: (result)=>{
+            location.reload
+            console.log(result);
+        },
+        error: (err)=>{
+            console.log("Error: ", err);
+        }
+    })
+}

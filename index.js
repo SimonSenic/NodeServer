@@ -79,6 +79,7 @@ app.post('/note/new', (req, res) => {
 })
 
 app.patch('/note/done', (req, res) => {
+    res.setHeader('Access-Control-Allow-Origin', '*')
     MongoClient.connect(connection, (error, client) => {
         if(error) return console.log("Invalid connection")
         const db = client.db(database)
