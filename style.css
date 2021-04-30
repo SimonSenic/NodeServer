@@ -1,0 +1,85 @@
+body {
+    font-family: sans-serif;
+    background-color: #f9f9f9;
+    padding-top: 10%;
+    display: flex;
+    justify-content: center;
+  }
+
+.form{
+    display: flex;
+    width: 500px;
+    padding: 40px 0 40px 0;
+    justify-content: center;
+    background-color:#f3f0f098;
+    border-radius: 15px;
+    border: 2px solid lightgray;
+}
+
+input{
+    border: 3px solid lightgray;
+    border-radius: 5px;
+    height: 20px;
+  }
+
+  label{
+      font-weight: bold;
+      padding-right: 15px;
+  }
+
+  .prio label{
+      padding-right: 43%;
+  }
+
+  #btn_insert{
+    display: block;
+    cursor: pointer;
+    background-color: #cc1632;
+    text-decoration: none;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    line-height: 30px;
+    width: 227px;
+  }
+
+  #btn_insert:hover{
+      background-color: #bb0e28;
+  }
+
+  .btn_reset{
+    display: block;
+    cursor: pointer;
+    background-color: #797373;
+    text-decoration: none;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    line-height: 30px;
+    width: 227px;
+  }
+
+  .btn_reset:hover{
+      background-color: #666363;
+  }
+
+  .list{
+     border: 3px solid #3b5998;
+     border-radius: 20px;
+     padding: 30px;
+     background-color: #f3f0f098;
+  }
+
+  .list div{
+    border-bottom: 1px solid #bfc7da;
+    padding-bottom: 15px;
+    padding-right: 200px;
+  }
+
+  h1{
+    font-family: "Brush Script MT", cursive;
+  }
